@@ -1,7 +1,7 @@
-acm-resover
+ioi-resover
 ==================
-本项目fork自[hiho-resolver](https://github.com/hiho-coder/hiho-resolver)，用于IOI系列竞赛的滚榜。
-相比原项目，主要优化了动画效率，更改了界面配色，并丰富了文档。提供部分分支援。
+Forked from [lixin-wei/acm-resolver](https://github.com/lixin-wei/acm-resolver)，modify code to support IOI contests mode(partial points supports).  
+
 
 # 截图
 
@@ -18,7 +18,7 @@ HZNUOJ，直接访问contest_sub_log.json.php?cid=xxxx即可获取相应场次�
 
 数据输入的代码在`js/main.js`的最后，`$.getJSON("contest.json", function(data){..})`
 
-默认是使用根目录下的`contest.json`，可以直接把准备好的数据贴到里面去。
+默认是使用根目录下的`contest.json`，可以直接把准备好的数据贴到里面去。可以透過[samuel21119/cf-contest-crawler]()自動匯出codeforces的contest.json檔案。
 
 ## 2. 搭建服务器
 
