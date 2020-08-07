@@ -2,6 +2,7 @@
  *  main.js
  */
 
+
 // Vuejs
 function vuejs() {
       
@@ -47,10 +48,31 @@ function vuejs() {
                 if(vm.$data.op_flag < op_length)
                     var el_old_next = $('#rank-' + op_next.old_rank);
                 setTimeout(function(){ 
-                    if(op.new_verdict == 'AC'){
-                        rank_old.score += 1;
-                        rank_old.penalty += op.new_penalty;
+                    var ver = op.new_verdict;
+                    if(ver == 'AC'){
+                        num = 100;
+                        var ver2 = op.old_verdict;
+                        if (ver2[0] == 'P') {
+                            var num2 = parseInt(ver2.substring(1, ver2.length));
+                            num -= num2;
+                        }
+                        rank_old.score += num;
+                        //rank_old.penalty += op.new_penalty;
                         rank_old.problem[op.problem_index].old_penalty = op.new_penalty;
+                    }else if (ver[0] == 'P') {
+                        var num = parseInt(ver.substring(1, ver.length));
+                        var ver2 = rank_old.problem[op.problem_index].old_verdict;
+                        if (ver2[0] == 'P') {
+                            var num2 = parseInt(ver2.substring(1, ver2.length));
+                            var mx = max(num, num2);
+                            op.new_verdict = "P" + mx.toString();
+                            if (num > num2)
+                                num -= num2;
+                            else
+                                num = 0;
+                        }
+                        console.log(num)
+                        rank_old.score += num;
                     }
                     rank_old.problem[op.problem_index].old_verdict = op.new_verdict;
                     rank_old.problem[op.problem_index].new_verdict = "NA";
@@ -100,12 +122,34 @@ function vuejs() {
                 setTimeout(function(){
                     // return function(){
                         // 修改原始数据
+                        var ver = op.new_verdict;
                         if(op.new_verdict == 'AC'){
-                            rank_old.score += 1;
+                            num = 100;
+                            var ver2 = op.old_verdict;
+                            if (ver2[0] == 'P') {
+                                var num2 = parseInt(ver2.substring(1, ver2.length));
+                                num -= num2;
+                            }
+                            console.log(num)
+                            rank_old.score += num;
                             rank_old.rank_show = op.new_rank_show;
                             console.log("new_rank_show" + op.new_rank_show);
-                            rank_old.penalty += op.new_penalty;
+                            //rank_old.penalty += op.new_penalty;
                             rank_old.problem[op.problem_index].old_penalty = op.new_penalty;
+                        }else if (ver[0] == 'P') {
+                            var num = parseInt(ver.substring(1, ver.length));
+                            var ver2 = rank_old.problem[op.problem_index].old_verdict;
+                            if (ver2[0] == 'P') {
+                                var num2 = parseInt(ver2.substring(1, ver2.length));
+                                var mx = max(num, num2);
+                                op.new_verdict = "P" + mx.toString();
+                                if (num > num2)
+                                    num -= num2;
+                                else
+                                    num = 0;
+                            }
+                            console.log(num)
+                            rank_old.score += num;
                         }
                         rank_old.problem[op.problem_index].old_verdict = op.new_verdict;
                         rank_old.problem[op.problem_index].new_verdict = "NA";
@@ -120,7 +164,7 @@ function vuejs() {
                             rank_old.problem[op.problem_index].old_submissions +=  op.frozen_submissions;
                             rank_old.problem[op.problem_index].frozen_submissions = 0;
                             rank_old.problem[op.problem_index].new_submissions = 0;
-                            alert(rank_old.problem[op.problem_index].old_submissions);
+                            //alert(rank_old.problem[op.problem_index].old_submissions);
                         }
                         //
                         Vue.nextTick(function(){
@@ -198,11 +242,20 @@ function vuejs() {
     Vue.filter('submissions', function (problem) {
         var st = resolver.status(problem);
         if(st == 'ac')
-            return problem.old_submissions + '/' + parseInt(problem.old_penalty / 60);
-        else if(st == 'frozen')
-            return problem.old_submissions + '+' + problem.frozen_submissions;
-        else if(st == 'failed')
-            return problem.old_submissions;
+            return 100;
+        else if(st == 'frozen') {
+            var ver = problem.old_verdict;
+            var num = parseInt(ver.substring(1, ver.length));
+            num = num.toString();
+            if (isNaN(num))
+                num = '0';
+            return num + '+' + problem.frozen_submissions;
+        }
+        else if(st == 'failed') {
+            var ver = problem.old_verdict;
+            var num = parseInt(ver.substring(1, ver.length));
+            return num;
+        }
         else 
             return 'untouched';
         // todo
@@ -291,7 +344,27 @@ $.getJSON("contest.json", function(data){
             Operation.back();
         }
         if(e && e.keyCode == 39 && vm.$data.op_status){ // key right
-            Operation.next();
+                focusElement(document.getElementsByClassName("selected")[0]);
+                Operation.next();
+        }
+        if(e && e.keyCode == 13) {
+            focusElement(document.getElementsByClassName("selected")[0]);
         }
     };
 });
+
+var focused = undefined;
+function isScrolledIntoView(elem) {
+    return elem == focused;
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+function focusElement(elem) {
+    elem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    focused = elem;
+}

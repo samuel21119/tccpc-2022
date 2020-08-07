@@ -2,7 +2,7 @@ function Resolver(solutions, users, problem_count){
 	this.solutions = solutions;
 	this.users = users;
 	this.problem_count = problem_count;
-	this.frozen_seconds = 3600*2;
+	this.frozen_seconds = 321;
 	this.operations = [];
 }
 
@@ -16,7 +16,9 @@ Resolver.prototype.status = function(problem) {
 	else 
 		return "frozen";
 }
-
+function max(a, b) {
+    return a > b ? a : b;
+}
 Resolver.prototype.calcOperations = function() {
 	this.rank = {};
 	for(var solution_id in this.solutions) {
@@ -45,17 +47,37 @@ Resolver.prototype.calcOperations = function() {
 			continue;
 		}
 		if(sol.submitted_seconds <= this.frozen_seconds) {
+            var ver = sol.verdict;
+			if(ver == 'AC') {
+				this.rank[sol.user_id].problem[sol.problem_index].old_submissions++;
+				//this.rank[sol.user_id].problem[sol.problem_index].ac_penalty = sol.submitted_seconds;
+				//this.rank[sol.user_id].problem[sol.problem_index].old_penalty = this.rank[sol.user_id].problem[sol.problem_index].ac_penalty + 20 * 60 * (this.rank[sol.user_id].problem[sol.problem_index].old_submissions - 1);
+                var num = 100;
+
+                ver = this.rank[sol.user_id].problem[sol.problem_index].old_verdict;
+                if (ver[0] == 'P') {
+                    var num2 = parseInt(ver.substring(1, ver.length));
+                    num -= num2;
+                }
+				this.rank[sol.user_id].score += num;
+				//this.rank[sol.user_id].penalty += this.rank[sol.user_id].problem[sol.problem_index].old_penalty;
+            }else if (ver[0] == 'P') {
+                var num = parseInt(ver.substring(1, ver.length));
+                ver = this.rank[sol.user_id].problem[sol.problem_index].old_verdict;
+                if (ver[0] == 'P') {
+                    var num2 = parseInt(ver.substring(1, ver.length));
+                    var mx = max(num, num2);
+                    sol.verdict = String('P' + mx.toString());
+                    if (num > num2)
+                        num -= num2;
+                    else
+                        num = 0;
+                }
+                this.rank[sol.user_id].score += num;
+            }else {
+				this.rank[sol.user_id].problem[sol.problem_index].old_submissions++;
+			}
 			this.rank[sol.user_id].problem[sol.problem_index].old_verdict = sol.verdict;
-			if(sol.verdict == 'AC') {
-				this.rank[sol.user_id].problem[sol.problem_index].old_submissions++;
-				this.rank[sol.user_id].problem[sol.problem_index].ac_penalty = sol.submitted_seconds;
-				this.rank[sol.user_id].problem[sol.problem_index].old_penalty = this.rank[sol.user_id].problem[sol.problem_index].ac_penalty + 20 * 60 * (this.rank[sol.user_id].problem[sol.problem_index].old_submissions - 1);
-				this.rank[sol.user_id].score++;
-				this.rank[sol.user_id].penalty += this.rank[sol.user_id].problem[sol.problem_index].old_penalty;
-			}
-			else {
-				this.rank[sol.user_id].problem[sol.problem_index].old_submissions++;
-			}
 		}
 		else {	//after standings get frozen	
 			if(this.rank[sol.user_id].problem[sol.problem_index].new_verdict=='AC') {
@@ -66,7 +88,7 @@ Resolver.prototype.calcOperations = function() {
 			if(sol.verdict == 'AC') {
 				this.rank[sol.user_id].problem[sol.problem_index].frozen_submissions++;
 				this.rank[sol.user_id].problem[sol.problem_index].new_submissions = this.rank[sol.user_id].problem[sol.problem_index].old_submissions + this.rank[sol.user_id].problem[sol.problem_index].frozen_submissions;
-				this.rank[sol.user_id].problem[sol.problem_index].ac_penalty = sol.submitted_seconds;
+				//this.rank[sol.user_id].problem[sol.problem_index].ac_penalty = sol.submitted_seconds;
 				this.rank[sol.user_id].problem[sol.problem_index].new_penalty = this.rank[sol.user_id].problem[sol.problem_index].ac_penalty + 20 * 60 * (this.rank[sol.user_id].problem[sol.problem_index].new_submissions - 1);
 			}
 			else {
@@ -124,11 +146,32 @@ Resolver.prototype.calcOperations = function() {
 						new_penalty: this.rank2[i].problem[j].new_penalty
 					};
 					var tmp = this.rank2[i];
-					if(tmp.problem[j].new_verdict == 'AC') {
-						tmp.score++;
-						tmp.penalty += tmp.problem[j].new_penalty;
-					}
-					tmp.problem[j].old_verdict = tmp.problem[j].new_verdict;
+                    var ver = tmp.problem[j].new_verdict;
+					if(ver == 'AC') {
+                        var num = 100;
+                        var ver2 = tmp.problem[j].old_verdict;
+                        if (ver2[0] == 'P') {
+                            var num2 = parseInt(ver2.substring(1, ver2.length));
+                            num -= num2;
+                        }
+						tmp.score += num;
+						//tmp.penalty += tmp.problem[j].new_penalty;
+                    }else if (ver[0] == 'P') {
+                        var num = parseInt(ver.substring(1, ver.length));
+                        var ver2 = tmp.problem[j].old_verdict;
+                        if (ver2[0] == 'P') {
+                            var num2 = parseInt(ver2.substring(1, ver2.length));
+                            var mx = max(num, num2);
+                            ver = "P" + mx.toString();
+                            if (num > num2)
+                                num -= num2;
+                            else
+                                num = 0;
+                        }
+                        tmp.score += num;
+                        console.log(num);
+                    }
+					tmp.problem[j].old_verdict = ver;
 					tmp.problem[j].new_verdict = "NA";
 					var k = i -1;
 					while(k >= 0 && (this.rank2[k].score < tmp.score || this.rank2[k].score == tmp.score && this.rank2[k].penalty > tmp.penalty)) {
