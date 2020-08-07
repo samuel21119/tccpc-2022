@@ -1,7 +1,7 @@
 acm-resover
 ==================
-本项目fork自[hiho-resolver](https://github.com/hiho-coder/hiho-resolver)，用于ACM系列竞赛的滚榜。
-相比原项目，主要优化了动画效率，更改了界面配色，并丰富了文档。
+本项目fork自[hiho-resolver](https://github.com/hiho-coder/hiho-resolver)，用于IOI系列竞赛的滚榜。
+相比原项目，主要优化了动画效率，更改了界面配色，并丰富了文档。提供部分分支援。
 
 # 截图
 
@@ -57,10 +57,11 @@ solution的格式，key可以任意，problem下标从1开始:
 381504: {
   user_id: "2",
   problem_index: "1",
-  verdict: "WA",
+  verdict: "P10",
   submitted_seconds: 23
 },
 ```
+P10代表取得部分分10分，P50為50分，AC則為100分。
 
 user的格式，其中key即为user的id，要和solution中对上：
 
