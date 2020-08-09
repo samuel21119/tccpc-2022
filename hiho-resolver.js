@@ -79,22 +79,31 @@ Resolver.prototype.calcOperations = function() {
 			}
 			this.rank[sol.user_id].problem[sol.problem_index].old_verdict = sol.verdict;
 		}
-		else {	//after standings get frozen	
-			if(this.rank[sol.user_id].problem[sol.problem_index].new_verdict=='AC') {
-				this.rank[sol.user_id].problem[sol.problem_index].frozen_submissions++;
-				continue;
-			}
-			this.rank[sol.user_id].problem[sol.problem_index].new_verdict = sol.verdict;
-			if(sol.verdict == 'AC') {
-				this.rank[sol.user_id].problem[sol.problem_index].frozen_submissions++;
-				this.rank[sol.user_id].problem[sol.problem_index].new_submissions = this.rank[sol.user_id].problem[sol.problem_index].old_submissions + this.rank[sol.user_id].problem[sol.problem_index].frozen_submissions;
-				//this.rank[sol.user_id].problem[sol.problem_index].ac_penalty = sol.submitted_seconds;
-				this.rank[sol.user_id].problem[sol.problem_index].new_penalty = this.rank[sol.user_id].problem[sol.problem_index].ac_penalty + 20 * 60 * (this.rank[sol.user_id].problem[sol.problem_index].new_submissions - 1);
-			}
-			else {
-				this.rank[sol.user_id].problem[sol.problem_index].frozen_submissions++;
-			}
-		}
+		else {    //after standings get frozen    
+            if(this.rank[sol.user_id].problem[sol.problem_index].new_verdict=='AC') {
+                this.rank[sol.user_id].problem[sol.problem_index].frozen_submissions++;
+                continue;
+            }
+            if(sol.verdict == 'AC') {
+                this.rank[sol.user_id].problem[sol.problem_index].new_verdict = sol.verdict;
+                this.rank[sol.user_id].problem[sol.problem_index].frozen_submissions++;
+                this.rank[sol.user_id].problem[sol.problem_index].new_submissions = this.rank[sol.user_id].problem[sol.problem_index].old_submissions + this.rank[sol.user_id].problem[sol.problem_index].frozen_submissions;
+                //this.rank[sol.user_id].problem[sol.problem_index].ac_penalty = sol.submitted_seconds;
+                this.rank[sol.user_id].problem[sol.problem_index].new_penalty = this.rank[sol.user_id].problem[sol.problem_index].ac_penalty + 20 * 60 * (this.rank[sol.user_id].problem[sol.problem_index].new_submissions - 1);
+            }
+            else {
+                var old = this.rank[sol.user_id].problem[sol.problem_index].new_verdict;
+                var tmp = sol.verdict;
+                if (old[0] == 'P') {
+                    var num1 = parseInt(old.substring(1, old.length));
+                    var num2 = parseInt(sol.verdict.substring(1, sol.verdict.length));
+                    var mx = max(num1, num2);
+                    tmp = String('P' + mx.toString());
+                }
+                this.rank[sol.user_id].problem[sol.problem_index].new_verdict = tmp;
+                this.rank[sol.user_id].problem[sol.problem_index].frozen_submissions++;
+            }
+        }
 	}
 	var uids = Object.keys(this.rank);
 	this.rank2 = [];
