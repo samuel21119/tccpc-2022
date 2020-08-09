@@ -249,6 +249,7 @@ function vuejs() {
             num = num.toString();
             if (isNaN(num))
                 num = '0';
+            return `${num}+[${problem.frozen_submissions}]`;
             return num + '+' + problem.frozen_submissions;
         }
         else if(st == 'failed') {
