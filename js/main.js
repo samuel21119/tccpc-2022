@@ -9,7 +9,7 @@ function vuejs() {
     var RANKS_KEY = 'icpc-ranks';
     var OPER_FLAG_KEY = 'operation-flag';
 
-    var FLAHING_TIME = 100; //闪烁时间
+    var OPEN_DELAY_TIME = 0; //闪烁时间
     var ROLLING_TIME = 1000; //排名上升时间
     window.Storage = {
         fetch: function(type) {
@@ -28,7 +28,7 @@ function vuejs() {
     };
 
     window.Operation = {
-        next: function() {
+        next: async function() {
             vm.$data.op_status = false;
             var op = vm.$data.operations[vm.$data.op_flag];
             var op_length = vm.$data.operations.length - 1;
@@ -41,9 +41,25 @@ function vuejs() {
             var el_old = $('#rank-' + op.old_rank);
             var el_new = $('#rank-' + op.new_rank);
 
+
+            // Flash
+            el_old
+                .find('.p-'+op.problem_index).addClass('flash')
+                .find('.p-content').addClass('flash');
+            await sleep(2 * 500);
+            el_old
+                .find('.p-'+op.problem_index).removeClass('flash')
+                .find('.p-content').removeClass('flash')
+
+            // Rotate
             el_old
                 .find('.p-'+op.problem_index).addClass('uncover')
                 .find('.p-content').addClass('uncover');
+            await sleep(parseInt(op.frozen_submissions) * 600);
+            el_old
+                .find('.p-'+op.problem_index).removeClass('uncover')
+                .find('.p-content').removeClass('uncover');
+
             if(op.new_rank == op.old_rank){
                 if(vm.$data.op_flag < op_length)
                     var el_old_next = $('#rank-' + op_next.old_rank);
@@ -88,12 +104,8 @@ function vuejs() {
                         rank_old.problem[op.problem_index].frozen_submissions = 0;
                         rank_old.problem[op.problem_index].new_submissions = 0;
                     }
-                    Vue.nextTick(function(){
-                        el_old
-                            .find('.p-'+op.problem_index).addClass('uncover')
-                            .find('.p-content').removeClass('uncover');
-                    });
-                        
+                    Vue.nextTick(setRank);
+
                     setTimeout(function(){
                         vm.selected(el_old, 'remove');
                         if(vm.$data.op_flag < op_length)
@@ -102,8 +114,8 @@ function vuejs() {
                         // vm.scrollToTop(op.old_rank, op_next.old_rank);
                         vm.$data.op_flag += 1;
                         vm.$data.op_status = true;
-                    }, FLAHING_TIME + 100);
-                }, FLAHING_TIME);
+                    }, OPEN_DELAY_TIME + 100);
+                }, OPEN_DELAY_TIME);
             }else{
                 var old_pos_top = el_old.position().top;
                 var new_pos_top = el_new.position().top;
@@ -169,9 +181,9 @@ function vuejs() {
                         //
                         Vue.nextTick(function(){
                             //添加揭晓题目闪动效果
-                            el_old
-                                .find('.p-'+op.problem_index).addClass('uncover')
-                                .find('.p-content').removeClass('uncover');
+                            //el_old
+                                //.find('.p-'+op.problem_index).addClass('uncover')
+                                //.find('.p-content').removeClass('uncover');
                             //修改排名
                             el_old.find('.rank').text(op.new_rank_show);
                             el_obj.forEach(function(val,i){ 
@@ -199,6 +211,7 @@ function vuejs() {
                                 }
                                 ranks_tmp[op.new_rank] = data_old;
                                 vm.$set('ranks', ranks_tmp);
+
                                 Vue.nextTick(function () {
                                     el_obj.forEach(function(val,i){ el_obj[i].removeAttr('style'); });
                                     el_old.find('.p-'+op.problem_index).removeClass('uncover');
@@ -211,6 +224,7 @@ function vuejs() {
                                     vm.$data.op_flag += 1;
                                     vm.$data.op_status = true;
                                 });
+                                Vue.nextTick(setRank);
                             });
                         for(var i = 0 ; i<el_obj.length ; ++i) {
                             if(106*(i-1)<=win_heigth){
@@ -220,9 +234,10 @@ function vuejs() {
                                 el_obj[i].css({'top': 106+'px'});
                             }
                         }
-                    }, FLAHING_TIME + 100);// two loop    
+                    }, OPEN_DELAY_TIME + 100);// two loop    
+
                     // };
-                }, FLAHING_TIME);
+                }, OPEN_DELAY_TIME);
             }
         },
 
@@ -345,8 +360,10 @@ $.getJSON("contest.json", function(data){
             Operation.back();
         }
         if(e && e.keyCode == 39 && vm.$data.op_status){ // key right
-                focusElement(document.getElementsByClassName("selected")[0]);
-                Operation.next();
+            var elem = document.getElementsByClassName("selected")[0];
+            if (!isScrolledIntoView(elem))
+                focusElement(elem);
+            Operation.next();
         }
         if(e && e.keyCode == 13) {
             focusElement(document.getElementsByClassName("selected")[0]);
@@ -356,7 +373,6 @@ $.getJSON("contest.json", function(data){
 
 var focused = undefined;
 function isScrolledIntoView(elem) {
-    return elem == focused;
     var docViewTop = $(window).scrollTop();
     var docViewBottom = docViewTop + $(window).height();
 
@@ -366,6 +382,21 @@ function isScrolledIntoView(elem) {
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 function focusElement(elem) {
-    elem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    elem.scrollIntoView({ behavior: 'smooth', block: 'end' });
     focused = elem;
+}
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+function setRank() {
+    // Same score => same rank
+    var user_cnt = vm.$data.ranks.length;
+    for (var i = 1; i < user_cnt; i++) {
+        var now = $('#rank-'+ i.toString());
+        var prev = $('#rank-'+ (i - 1).toString());
+        if (now.find('.solved').text() == prev.find('.solved').text() && now.find('.penalty').text() == prev.find('.penalty').text()) {
+            console.log(i);
+            now.find('.rank').text(prev.find('.rank').text());
+        }
+    }
 }

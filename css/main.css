@@ -64,9 +64,14 @@
     background-color: #406b82;
 }
 
+.flash {
+    animation: flashing 500ms infinite;
+    -webkit-animation: flashing 500ms infinite; [>Safari and Chrome<]
+}
 .uncover {
-    animation: flashing 300ms infinite;
-    -webkit-animation: flashing 30ms infinite; /*Safari and Chrome*/
+    background-color: #BD995B;
+    animation: rotating 600ms infinite;
+    -webkit-animation: rotating 600ms infinite; [>Safari and Chrome<]
 }
 
 @keyframes flashing {
@@ -74,9 +79,19 @@
     to { background-color: #BD995B }
 }
 
-@-webkit-keyframes flashing {/*Safari and Chrome*/
+@-webkit-keyframes flashing {[>Safari and Chrome<]
     from { background-color: #8a6d3b }
     to { background-color: #BD995B }
+}
+
+@keyframes rotating {
+    from { transform: rotateX(0); }
+    to { transform: rotateX(180deg); }
+}
+
+@-webkit-keyframes rotating {/*Safari and Chrome*/
+    from { transform: rotateX(0); }
+    to { transform: rotateX(180deg); }
 }
 
 /*

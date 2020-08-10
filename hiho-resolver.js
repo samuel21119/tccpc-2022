@@ -19,7 +19,7 @@ Resolver.prototype.status = function(problem) {
 function max(a, b) {
     return a > b ? a : b;
 }
-Resolver.prototype.calcOperations = function() {
+Resolver.prototype.calcOperations = async function() {
 	this.rank = {};
 	for(var solution_id in this.solutions) {
 		var sol = this.solutions[solution_id];
@@ -200,4 +200,15 @@ Resolver.prototype.calcOperations = function() {
 			}
 		}
 	}
+    await sleep(100);
+    var user_cnt = this.rank2.length;
+    console.log("user:", user_cnt)
+    for (var i = 1; i < user_cnt; i++) {
+        var now = $('#rank-'+ i.toString());
+        var prev = $('#rank-'+ (i - 1).toString());
+        if (now.find('.solved').text() == prev.find('.solved').text() && now.find('.penalty').text() == prev.find('.penalty').text()) {
+            console.log(now.find('.solved').text());
+            now.find('.rank').text(prev.find('.rank').text());
+        }
+    }
 }
