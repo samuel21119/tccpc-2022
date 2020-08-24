@@ -56,7 +56,7 @@ The default contest data file is `contest.json`, which is in root folder. You ca
   submitted_seconds: 23
 },
 ```
-P0 = Wrong Answer: 0
+P0 = Wrong Answer: 0  
 P10 = Partial score: 10  
 AC = Accept: 100  
 
