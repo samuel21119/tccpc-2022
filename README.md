@@ -7,51 +7,44 @@ Forked from [lixin-wei/acm-resolver](https://github.com/lixin-wei/acm-resolver)�
 
 ![screenshot](screenshots/shot1.gif)
 
-使用教程
+User Guide
 ------------------------
 
-## 1. 准备数据
+## 1. Prepare data
+Import data's code is located in `js/main.js`: `$.getJSON("contest.json", function(data){..})`  
 
-HZNUOJ，直接访问contest_sub_log.json.php?cid=xxxx即可获取相应场次的数据。
+The default contest data file is `contest.json`, which is in root folder. You can paste your own data into it.  
+[samuel21119/cf-contest-crawler](https://github.com/samuel21119/cf-contest-crawler) can auto export codeforces' contest.json.
 
-或者也可以自己构造数据，json的格式在文档末尾。
+## 2. Host Server
 
-数据输入的代码在`js/main.js`的最后，`$.getJSON("contest.json", function(data){..})`
+1. Page must be visited by http protocol. Prepare a web server, recommend WAMP for Windows; MAMP for macOS. Or run `python -m SimpleHTTPServer` for testing.  
+2. Copy all files to the directory under the server, and visit `index.html` in the browser.
 
-默认是使用根目录下的`contest.json`，可以直接把准备好的数据贴到里面去。可以透過[samuel21119/cf-contest-crawler](https://github.com/samuel21119/cf-contest-crawler)自動匯出codeforces的contest.json檔案。
+## 3. Control Explanation
 
-## 2. 搭建服务器
+- Press RIGHT arrow key to continue.  
+- Press ENTER to focus on current rank.
 
-1. 网页必须以http协议访问，准备一个web服务器，Windows推荐用WAMP，MacOS推荐用MAMP。
-2. 把整个工程文件拷贝到服务器的目录下，在浏览器中访问index.html即可。
-
-## 3. 操作说明
-
-不停按方向键右即可。  
-
-按下Enter鍵可以自動捲動視窗至當前開獎名次。
-
-**如果切换了数据源，需要清空浏览器缓存再刷新。**
-
-## 更多配置
-
-封榜的时间默认是3600\*2s（距离比赛开始2小时，用的是一个热身赛的数据，整场比赛只有3小时），在`hiho-resolver.js` 最开头修改
-
-## JSON格式
+## JSON format
 
 ```
 {
+  frozen_second: 3600,
   problem_count: 10,
   solutions: {... },
   users: {... }
 }
 ```
 
-solution的格式，key可以任意，problem下标从1开始:
+### Solution
+
+- Key value of the submission can be any
+- Problem index is counted from 1
 
 ```
 381503: {
-  user_id: "1",
+  user_id: "ABC",
   problem_index: "1",
   verdict: "AC",
   submitted_seconds: 22
@@ -63,12 +56,15 @@ solution的格式，key可以任意，problem下标从1开始:
   submitted_seconds: 23
 },
 ```
-P10代表取得部分分10分，P50為50分，AC則為100分。
+P10 = Partial score: 10  
+AC = Accept: 100  
 
-user的格式，其中key即为user的id，要和solution中对上：
+### Users
+
+- Key value is the user ID, must match with the submission  
 
 ```
-1: {
+ABC: {
   name: "花落人亡两不知",
   college: "HZNU",
   is_exclude: true
