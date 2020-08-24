@@ -19,7 +19,7 @@ The default contest data file is `contest.json`, which is in root folder. You ca
 ## 2. Host Server
 
 1. Page must be visited by http protocol. Prepare a web server, recommend WAMP for Windows, MAMP for macOS or run `python -m SimpleHTTPServer` for testing.  
-2. Copy all files to the directory under the server, and visit `index.html` in the browser.
+2. Copy all files to the directory under the server and visit `index.html` in the browser.
 
 ## 3. Control Explanation
 
@@ -56,6 +56,7 @@ The default contest data file is `contest.json`, which is in root folder. You ca
   submitted_seconds: 23
 },
 ```
+P0 = Wrong Answer: 0
 P10 = Partial score: 10  
 AC = Accept: 100  
 
