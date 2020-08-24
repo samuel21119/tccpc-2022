@@ -309,7 +309,7 @@ function vuejs() {
 
         methods: {
             reset: function(){
-                if(confirm('确定要重置排名吗？')){    
+                if(confirm('Reset standings?')){    
                     localStorage.clear();
                     window.location.reload();
                 }
@@ -343,7 +343,7 @@ function vuejs() {
 }
 
 $.getJSON("contest.json", function(data){
-    var resolver = new Resolver(data.solutions, data.users, data.problem_count);
+    var resolver = new Resolver(data.solutions, data.users, data.problem_count, data.frozen_second);
     window.resolver = resolver;
     resolver.calcOperations();
     vuejs();
