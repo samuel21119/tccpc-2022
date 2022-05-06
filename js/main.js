@@ -66,14 +66,14 @@ function vuejs() {
                 setTimeout(function(){ 
                     var ver = op.new_verdict;
                     if(ver == 'AC'){
-                        num = 100;
+                        num = 1;
                         var ver2 = op.old_verdict;
                         if (ver2[0] == 'P') {
                             var num2 = parseInt(ver2.substring(1, ver2.length));
                             num -= num2;
                         }
                         rank_old.score += num;
-                        //rank_old.penalty += op.new_penalty;
+                        rank_old.penalty += op.new_penalty;
                         rank_old.problem[op.problem_index].old_penalty = op.new_penalty;
                     }else if (ver[0] == 'P') {
                         var num = parseInt(ver.substring(1, ver.length));
@@ -136,7 +136,7 @@ function vuejs() {
                         // 修改原始数据
                         var ver = op.new_verdict;
                         if(op.new_verdict == 'AC'){
-                            num = 100;
+                            num = 1;
                             var ver2 = op.old_verdict;
                             if (ver2[0] == 'P') {
                                 var num2 = parseInt(ver2.substring(1, ver2.length));
@@ -146,7 +146,7 @@ function vuejs() {
                             rank_old.score += num;
                             rank_old.rank_show = op.new_rank_show;
                             console.log("new_rank_show" + op.new_rank_show);
-                            //rank_old.penalty += op.new_penalty;
+                            rank_old.penalty += op.new_penalty;
                             rank_old.problem[op.problem_index].old_penalty = op.new_penalty;
                         }else if (ver[0] == 'P') {
                             var num = parseInt(ver.substring(1, ver.length));
@@ -257,16 +257,11 @@ function vuejs() {
     Vue.filter('submissions', function (problem) {
         var st = resolver.status(problem);
         if(st == 'ac')
-            return 100;
-        else if(st == 'frozen') {
-            var ver = problem.old_verdict;
-            var num = parseInt(ver.substring(1, ver.length));
-            num = num.toString();
-            if (isNaN(num))
-                num = '0';
-            return `${num}+[${problem.frozen_submissions}]`;
-            return num + '+' + problem.frozen_submissions;
-        }
+            return problem.old_submissions + '/' + parseInt(problem.old_penalty / 60);
+        else if(st == 'frozen')
+            return problem.old_submissions + '+' + problem.frozen_submissions;
+        else if(st == 'failed')
+            return problem.old_submissions;
         else if(st == 'failed') {
             var ver = problem.old_verdict;
             var num = parseInt(ver.substring(1, ver.length));
