@@ -4,12 +4,12 @@ const cheerio = require('cheerio');
 
 
 //-- Parameters
-const DOMJUDGE_URL = "https://nthucp.cs.nthu.edu.tw:10203";
+const DOMJUDGE_URL = "https://nthucp.cs.nthu.edu.tw";
 const AUTH = "Basic " + "YWRtaW46c2Q3OHVOMDBDR0p3YXRYNA==";
 const ADMIN = "admin";
 const PASS = "";
-const PHPSESSID = "7948lgmgvtmcabi92sr23dju5r";
-const CONTEST_ID = "3";
+const PHPSESSID = "kdki5h6gfhh091r4hdo8lbhs3u";
+const CONTEST_ID = "7";
 const FROZEN_TIME = "200000";
 //-- Parameters
 
