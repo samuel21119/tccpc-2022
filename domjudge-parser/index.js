@@ -5,19 +5,19 @@ const cheerio = require('cheerio');
 
 //-- Parameters
 const DOMJUDGE_URL = "https://nthucp.cs.nthu.edu.tw";
-const AUTH = "Basic " + "YWRtaW46c2Q3OHVOMDBDR0p3YXRYNA==";
+const AUTH = "Basic " + "";
 const ADMIN = "admin";
 const PASS = "";
-const PHPSESSID = "kdki5h6gfhh091r4hdo8lbhs3u";
-const CONTEST_ID = "7";
-const FROZEN_TIME = "200000";
+const PHPSESSID = "";
+const CONTEST_ID = "4";
+const FROZEN_TIME = "14400";
 //-- Parameters
 
 const API_DOCS = `${DOMJUDGE_URL}/api/doc`;
 const API_PROBLEM_LIST = `${DOMJUDGE_URL}/api/v4/contests/${CONTEST_ID}/problems?strict=false`;
 const API_TEAM_LIST = `${DOMJUDGE_URL}/api/v4/contests/${CONTEST_ID}/teams?strict=false`;
 const API_SUBMISSION_LIST = `${DOMJUDGE_URL}/api/v4/contests/${CONTEST_ID}/submissions?strict=false`;
-const WEB_SUBMISSION_LIST = `${DOMJUDGE_URL}/jury/submissions`
+const WEB_SUBMISSION_LIST = `${DOMJUDGE_URL}/jury/submissions?view=all`
 
 let contest = {};
 let problemId_to_index = {}
@@ -98,7 +98,7 @@ const getSubmissions = () => {
         data.forEach(ele => {
             const {contest_time, team_id, problem_id, id} = ele;
             let time = contest_time.split(":");
-            let seconds = parseInt(time[2]) + 60 * (parseInt(time[1]) + 60 * parseInt(time[0]));
+            let seconds = 60 * (parseInt(time[1]) + 60 * parseInt(time[0]));
             submissions[id] = {
                 user_id: team_id,
                 problem_index: problemId_to_index[problem_id],
@@ -120,7 +120,7 @@ const getSubmissions = () => {
         const $ = cheerio.load(req.data);
         $("table.submissions-table").find("tbody > tr").each((idx, ele) => {
             const sid = $(ele).attr("data-submission-id");
-            let verdict = $(ele).attr("data-result");
+            let verdict = $(ele).find(".sol").text();
             if (verdict == "correct")
                 verdict = "AC";
             else if (verdict == "compiler-error")

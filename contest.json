@@ -1,6 +1,6 @@
 {
-  "frozen_second": "200000",
-  "problem_count": 3,
+  "frozen_second": "1440000",
+  "problem_count": 12,
   "users": {
     "1": {
       "name": "WLY",
@@ -101,12 +101,1700 @@
       "name": "AYDD",
       "college": "NTU",
       "is_exclude": false
-    },
-    "21": {
-      "name": "demo-team",
-      "college": null,
-      "is_exclude": false
     }
   },
-  "solutions": {}
+  "solutions": {
+    "4": {
+      "user_id": "2",
+      "problem_index": 1,
+      "submitted_seconds": 180,
+      "verdict": "AC"
+    },
+    "5": {
+      "user_id": "1",
+      "problem_index": 1,
+      "submitted_seconds": 180,
+      "verdict": "WA"
+    },
+    "6": {
+      "user_id": "9",
+      "problem_index": 1,
+      "submitted_seconds": 180,
+      "verdict": "AC"
+    },
+    "7": {
+      "user_id": "20",
+      "problem_index": 1,
+      "submitted_seconds": 240,
+      "verdict": "AC"
+    },
+    "8": {
+      "user_id": "14",
+      "problem_index": 1,
+      "submitted_seconds": 240,
+      "verdict": "AC"
+    },
+    "9": {
+      "user_id": "19",
+      "problem_index": 1,
+      "submitted_seconds": 300,
+      "verdict": "AC"
+    },
+    "10": {
+      "user_id": "12",
+      "problem_index": 1,
+      "submitted_seconds": 300,
+      "verdict": "AC"
+    },
+    "11": {
+      "user_id": "5",
+      "problem_index": 1,
+      "submitted_seconds": 300,
+      "verdict": "AC"
+    },
+    "12": {
+      "user_id": "4",
+      "problem_index": 1,
+      "submitted_seconds": 300,
+      "verdict": "AC"
+    },
+    "13": {
+      "user_id": "18",
+      "problem_index": 1,
+      "submitted_seconds": 300,
+      "verdict": "AC"
+    },
+    "14": {
+      "user_id": "16",
+      "problem_index": 1,
+      "submitted_seconds": 360,
+      "verdict": "AC"
+    },
+    "15": {
+      "user_id": "1",
+      "problem_index": 1,
+      "submitted_seconds": 360,
+      "verdict": "AC"
+    },
+    "16": {
+      "user_id": "2",
+      "problem_index": 3,
+      "submitted_seconds": 360,
+      "verdict": "AC"
+    },
+    "17": {
+      "user_id": "10",
+      "problem_index": 1,
+      "submitted_seconds": 420,
+      "verdict": "AC"
+    },
+    "18": {
+      "user_id": "3",
+      "problem_index": 1,
+      "submitted_seconds": 420,
+      "verdict": "AC"
+    },
+    "19": {
+      "user_id": "18",
+      "problem_index": 3,
+      "submitted_seconds": 420,
+      "verdict": "AC"
+    },
+    "20": {
+      "user_id": "19",
+      "problem_index": 8,
+      "submitted_seconds": 480,
+      "verdict": "AC"
+    },
+    "21": {
+      "user_id": "9",
+      "problem_index": 3,
+      "submitted_seconds": 480,
+      "verdict": "AC"
+    },
+    "22": {
+      "user_id": "14",
+      "problem_index": 3,
+      "submitted_seconds": 480,
+      "verdict": "AC"
+    },
+    "23": {
+      "user_id": "20",
+      "problem_index": 8,
+      "submitted_seconds": 480,
+      "verdict": "WA"
+    },
+    "24": {
+      "user_id": "7",
+      "problem_index": 1,
+      "submitted_seconds": 480,
+      "verdict": "AC"
+    },
+    "25": {
+      "user_id": "6",
+      "problem_index": 1,
+      "submitted_seconds": 480,
+      "verdict": "AC"
+    },
+    "26": {
+      "user_id": "20",
+      "problem_index": 8,
+      "submitted_seconds": 540,
+      "verdict": "WA"
+    },
+    "27": {
+      "user_id": "11",
+      "problem_index": 1,
+      "submitted_seconds": 600,
+      "verdict": "AC"
+    },
+    "28": {
+      "user_id": "19",
+      "problem_index": 3,
+      "submitted_seconds": 660,
+      "verdict": "AC"
+    },
+    "29": {
+      "user_id": "20",
+      "problem_index": 3,
+      "submitted_seconds": 660,
+      "verdict": "AC"
+    },
+    "30": {
+      "user_id": "5",
+      "problem_index": 3,
+      "submitted_seconds": 660,
+      "verdict": "AC"
+    },
+    "31": {
+      "user_id": "12",
+      "problem_index": 8,
+      "submitted_seconds": 720,
+      "verdict": "AC"
+    },
+    "32": {
+      "user_id": "20",
+      "problem_index": 8,
+      "submitted_seconds": 720,
+      "verdict": "AC"
+    },
+    "33": {
+      "user_id": "6",
+      "problem_index": 3,
+      "submitted_seconds": 780,
+      "verdict": "WA"
+    },
+    "34": {
+      "user_id": "8",
+      "problem_index": 1,
+      "submitted_seconds": 780,
+      "verdict": "WA"
+    },
+    "35": {
+      "user_id": "10",
+      "problem_index": 8,
+      "submitted_seconds": 840,
+      "verdict": "AC"
+    },
+    "36": {
+      "user_id": "11",
+      "problem_index": 3,
+      "submitted_seconds": 840,
+      "verdict": "AC"
+    },
+    "37": {
+      "user_id": "7",
+      "problem_index": 3,
+      "submitted_seconds": 840,
+      "verdict": "AC"
+    },
+    "38": {
+      "user_id": "8",
+      "problem_index": 1,
+      "submitted_seconds": 900,
+      "verdict": "AC"
+    },
+    "39": {
+      "user_id": "4",
+      "problem_index": 3,
+      "submitted_seconds": 900,
+      "verdict": "AC"
+    },
+    "40": {
+      "user_id": "2",
+      "problem_index": 8,
+      "submitted_seconds": 960,
+      "verdict": "AC"
+    },
+    "41": {
+      "user_id": "16",
+      "problem_index": 8,
+      "submitted_seconds": 960,
+      "verdict": "AC"
+    },
+    "42": {
+      "user_id": "1",
+      "problem_index": 3,
+      "submitted_seconds": 1020,
+      "verdict": "AC"
+    },
+    "43": {
+      "user_id": "20",
+      "problem_index": 5,
+      "submitted_seconds": 1080,
+      "verdict": "WA"
+    },
+    "44": {
+      "user_id": "18",
+      "problem_index": 8,
+      "submitted_seconds": 1080,
+      "verdict": "AC"
+    },
+    "45": {
+      "user_id": "13",
+      "problem_index": 1,
+      "submitted_seconds": 1080,
+      "verdict": "AC"
+    },
+    "46": {
+      "user_id": "8",
+      "problem_index": 3,
+      "submitted_seconds": 1140,
+      "verdict": "AC"
+    },
+    "47": {
+      "user_id": "12",
+      "problem_index": 3,
+      "submitted_seconds": 1140,
+      "verdict": "AC"
+    },
+    "48": {
+      "user_id": "14",
+      "problem_index": 8,
+      "submitted_seconds": 1320,
+      "verdict": "AC"
+    },
+    "49": {
+      "user_id": "6",
+      "problem_index": 8,
+      "submitted_seconds": 1380,
+      "verdict": "AC"
+    },
+    "50": {
+      "user_id": "9",
+      "problem_index": 5,
+      "submitted_seconds": 1380,
+      "verdict": "WA"
+    },
+    "51": {
+      "user_id": "5",
+      "problem_index": 8,
+      "submitted_seconds": 1560,
+      "verdict": "AC"
+    },
+    "52": {
+      "user_id": "6",
+      "problem_index": 3,
+      "submitted_seconds": 1560,
+      "verdict": "AC"
+    },
+    "53": {
+      "user_id": "4",
+      "problem_index": 5,
+      "submitted_seconds": 1740,
+      "verdict": "WA"
+    },
+    "54": {
+      "user_id": "14",
+      "problem_index": 2,
+      "submitted_seconds": 1800,
+      "verdict": "AC"
+    },
+    "55": {
+      "user_id": "9",
+      "problem_index": 8,
+      "submitted_seconds": 1800,
+      "verdict": "WA"
+    },
+    "56": {
+      "user_id": "4",
+      "problem_index": 5,
+      "submitted_seconds": 1980,
+      "verdict": "WA"
+    },
+    "57": {
+      "user_id": "19",
+      "problem_index": 5,
+      "submitted_seconds": 2040,
+      "verdict": "AC"
+    },
+    "58": {
+      "user_id": "9",
+      "problem_index": 5,
+      "submitted_seconds": 2040,
+      "verdict": "AC"
+    },
+    "59": {
+      "user_id": "10",
+      "problem_index": 3,
+      "submitted_seconds": 2040,
+      "verdict": "WA"
+    },
+    "60": {
+      "user_id": "1",
+      "problem_index": 8,
+      "submitted_seconds": 2100,
+      "verdict": "AC"
+    },
+    "61": {
+      "user_id": "16",
+      "problem_index": 3,
+      "submitted_seconds": 2100,
+      "verdict": "WA"
+    },
+    "62": {
+      "user_id": "5",
+      "problem_index": 5,
+      "submitted_seconds": 2160,
+      "verdict": "WA"
+    },
+    "63": {
+      "user_id": "9",
+      "problem_index": 8,
+      "submitted_seconds": 2160,
+      "verdict": "WA"
+    },
+    "64": {
+      "user_id": "9",
+      "problem_index": 8,
+      "submitted_seconds": 2160,
+      "verdict": "AC"
+    },
+    "65": {
+      "user_id": "20",
+      "problem_index": 5,
+      "submitted_seconds": 2160,
+      "verdict": "AC"
+    },
+    "66": {
+      "user_id": "14",
+      "problem_index": 1,
+      "submitted_seconds": 2160,
+      "verdict": "RE"
+    },
+    "67": {
+      "user_id": "13",
+      "problem_index": 3,
+      "submitted_seconds": 2220,
+      "verdict": "AC"
+    },
+    "68": {
+      "user_id": "12",
+      "problem_index": 7,
+      "submitted_seconds": 2340,
+      "verdict": "AC"
+    },
+    "69": {
+      "user_id": "10",
+      "problem_index": 3,
+      "submitted_seconds": 2400,
+      "verdict": "AC"
+    },
+    "70": {
+      "user_id": "18",
+      "problem_index": 5,
+      "submitted_seconds": 2400,
+      "verdict": "AC"
+    },
+    "71": {
+      "user_id": "3",
+      "problem_index": 3,
+      "submitted_seconds": 2460,
+      "verdict": "AC"
+    },
+    "72": {
+      "user_id": "16",
+      "problem_index": 3,
+      "submitted_seconds": 2580,
+      "verdict": "AC"
+    },
+    "73": {
+      "user_id": "4",
+      "problem_index": 8,
+      "submitted_seconds": 2580,
+      "verdict": "AC"
+    },
+    "74": {
+      "user_id": "20",
+      "problem_index": 7,
+      "submitted_seconds": 2580,
+      "verdict": "AC"
+    },
+    "75": {
+      "user_id": "19",
+      "problem_index": 6,
+      "submitted_seconds": 2640,
+      "verdict": "WA"
+    },
+    "76": {
+      "user_id": "7",
+      "problem_index": 8,
+      "submitted_seconds": 2640,
+      "verdict": "WA"
+    },
+    "77": {
+      "user_id": "13",
+      "problem_index": 8,
+      "submitted_seconds": 2820,
+      "verdict": "WA"
+    },
+    "78": {
+      "user_id": "7",
+      "problem_index": 8,
+      "submitted_seconds": 2820,
+      "verdict": "AC"
+    },
+    "79": {
+      "user_id": "13",
+      "problem_index": 8,
+      "submitted_seconds": 2880,
+      "verdict": "WA"
+    },
+    "80": {
+      "user_id": "4",
+      "problem_index": 5,
+      "submitted_seconds": 2940,
+      "verdict": "TLE"
+    },
+    "81": {
+      "user_id": "14",
+      "problem_index": 7,
+      "submitted_seconds": 2940,
+      "verdict": "AC"
+    },
+    "82": {
+      "user_id": "3",
+      "problem_index": 8,
+      "submitted_seconds": 3060,
+      "verdict": "TLE"
+    },
+    "83": {
+      "user_id": "16",
+      "problem_index": 4,
+      "submitted_seconds": 3120,
+      "verdict": "AC"
+    },
+    "84": {
+      "user_id": "13",
+      "problem_index": 8,
+      "submitted_seconds": 3120,
+      "verdict": "TLE"
+    },
+    "85": {
+      "user_id": "8",
+      "problem_index": 8,
+      "submitted_seconds": 3240,
+      "verdict": "WA"
+    },
+    "86": {
+      "user_id": "19",
+      "problem_index": 7,
+      "submitted_seconds": 3480,
+      "verdict": "AC"
+    },
+    "87": {
+      "user_id": "11",
+      "problem_index": 8,
+      "submitted_seconds": 3480,
+      "verdict": "WA"
+    },
+    "88": {
+      "user_id": "10",
+      "problem_index": 2,
+      "submitted_seconds": 3600,
+      "verdict": "AC"
+    },
+    "89": {
+      "user_id": "20",
+      "problem_index": 2,
+      "submitted_seconds": 3720,
+      "verdict": "WA"
+    },
+    "90": {
+      "user_id": "14",
+      "problem_index": 5,
+      "submitted_seconds": 3720,
+      "verdict": "WA"
+    },
+    "91": {
+      "user_id": "20",
+      "problem_index": 2,
+      "submitted_seconds": 3780,
+      "verdict": "WA"
+    },
+    "92": {
+      "user_id": "8",
+      "problem_index": 8,
+      "submitted_seconds": 3780,
+      "verdict": "WA"
+    },
+    "93": {
+      "user_id": "18",
+      "problem_index": 2,
+      "submitted_seconds": 3840,
+      "verdict": "AC"
+    },
+    "94": {
+      "user_id": "13",
+      "problem_index": 8,
+      "submitted_seconds": 3900,
+      "verdict": "TLE"
+    },
+    "95": {
+      "user_id": "3",
+      "problem_index": 8,
+      "submitted_seconds": 4020,
+      "verdict": "WA"
+    },
+    "96": {
+      "user_id": "9",
+      "problem_index": 2,
+      "submitted_seconds": 4020,
+      "verdict": "CE"
+    },
+    "97": {
+      "user_id": "3",
+      "problem_index": 8,
+      "submitted_seconds": 4080,
+      "verdict": "WA"
+    },
+    "98": {
+      "user_id": "1",
+      "problem_index": 5,
+      "submitted_seconds": 4080,
+      "verdict": "AC"
+    },
+    "99": {
+      "user_id": "14",
+      "problem_index": 5,
+      "submitted_seconds": 4140,
+      "verdict": "AC"
+    },
+    "100": {
+      "user_id": "9",
+      "problem_index": 2,
+      "submitted_seconds": 4140,
+      "verdict": "AC"
+    },
+    "101": {
+      "user_id": "7",
+      "problem_index": 5,
+      "submitted_seconds": 4200,
+      "verdict": "TLE"
+    },
+    "102": {
+      "user_id": "11",
+      "problem_index": 2,
+      "submitted_seconds": 4260,
+      "verdict": "AC"
+    },
+    "103": {
+      "user_id": "11",
+      "problem_index": 8,
+      "submitted_seconds": 4320,
+      "verdict": "AC"
+    },
+    "104": {
+      "user_id": "3",
+      "problem_index": 8,
+      "submitted_seconds": 4380,
+      "verdict": "WA"
+    },
+    "105": {
+      "user_id": "20",
+      "problem_index": 2,
+      "submitted_seconds": 4380,
+      "verdict": "AC"
+    },
+    "106": {
+      "user_id": "14",
+      "problem_index": 4,
+      "submitted_seconds": 4500,
+      "verdict": "WA"
+    },
+    "107": {
+      "user_id": "1",
+      "problem_index": 2,
+      "submitted_seconds": 4740,
+      "verdict": "AC"
+    },
+    "108": {
+      "user_id": "14",
+      "problem_index": 4,
+      "submitted_seconds": 4740,
+      "verdict": "WA"
+    },
+    "109": {
+      "user_id": "3",
+      "problem_index": 8,
+      "submitted_seconds": 4920,
+      "verdict": "AC"
+    },
+    "110": {
+      "user_id": "19",
+      "problem_index": 2,
+      "submitted_seconds": 5040,
+      "verdict": "WA"
+    },
+    "111": {
+      "user_id": "12",
+      "problem_index": 5,
+      "submitted_seconds": 5040,
+      "verdict": "WA"
+    },
+    "112": {
+      "user_id": "13",
+      "problem_index": 5,
+      "submitted_seconds": 5100,
+      "verdict": "WA"
+    },
+    "113": {
+      "user_id": "6",
+      "problem_index": 6,
+      "submitted_seconds": 5160,
+      "verdict": "AC"
+    },
+    "114": {
+      "user_id": "10",
+      "problem_index": 6,
+      "submitted_seconds": 5160,
+      "verdict": "AC"
+    },
+    "115": {
+      "user_id": "12",
+      "problem_index": 2,
+      "submitted_seconds": 5160,
+      "verdict": "RE"
+    },
+    "116": {
+      "user_id": "4",
+      "problem_index": 2,
+      "submitted_seconds": 5280,
+      "verdict": "AC"
+    },
+    "117": {
+      "user_id": "19",
+      "problem_index": 2,
+      "submitted_seconds": 5340,
+      "verdict": "AC"
+    },
+    "118": {
+      "user_id": "7",
+      "problem_index": 5,
+      "submitted_seconds": 5340,
+      "verdict": "WA"
+    },
+    "119": {
+      "user_id": "12",
+      "problem_index": 2,
+      "submitted_seconds": 5400,
+      "verdict": "RE"
+    },
+    "120": {
+      "user_id": "5",
+      "problem_index": 2,
+      "submitted_seconds": 5400,
+      "verdict": "AC"
+    },
+    "121": {
+      "user_id": "13",
+      "problem_index": 5,
+      "submitted_seconds": 5520,
+      "verdict": "CE"
+    },
+    "122": {
+      "user_id": "13",
+      "problem_index": 5,
+      "submitted_seconds": 5580,
+      "verdict": "WA"
+    },
+    "123": {
+      "user_id": "7",
+      "problem_index": 5,
+      "submitted_seconds": 5700,
+      "verdict": "WA"
+    },
+    "124": {
+      "user_id": "7",
+      "problem_index": 5,
+      "submitted_seconds": 5760,
+      "verdict": "WA"
+    },
+    "125": {
+      "user_id": "20",
+      "problem_index": 6,
+      "submitted_seconds": 5760,
+      "verdict": "AC"
+    },
+    "126": {
+      "user_id": "8",
+      "problem_index": 5,
+      "submitted_seconds": 5760,
+      "verdict": "WA"
+    },
+    "127": {
+      "user_id": "14",
+      "problem_index": 6,
+      "submitted_seconds": 5820,
+      "verdict": "AC"
+    },
+    "128": {
+      "user_id": "8",
+      "problem_index": 5,
+      "submitted_seconds": 5880,
+      "verdict": "WA"
+    },
+    "129": {
+      "user_id": "19",
+      "problem_index": 6,
+      "submitted_seconds": 5940,
+      "verdict": "AC"
+    },
+    "130": {
+      "user_id": "3",
+      "problem_index": 5,
+      "submitted_seconds": 5940,
+      "verdict": "WA"
+    },
+    "131": {
+      "user_id": "8",
+      "problem_index": 8,
+      "submitted_seconds": 6000,
+      "verdict": "WA"
+    },
+    "132": {
+      "user_id": "4",
+      "problem_index": 5,
+      "submitted_seconds": 6060,
+      "verdict": "WA"
+    },
+    "133": {
+      "user_id": "12",
+      "problem_index": 2,
+      "submitted_seconds": 6120,
+      "verdict": "RE"
+    },
+    "134": {
+      "user_id": "10",
+      "problem_index": 5,
+      "submitted_seconds": 6120,
+      "verdict": "TLE"
+    },
+    "135": {
+      "user_id": "16",
+      "problem_index": 5,
+      "submitted_seconds": 6180,
+      "verdict": "AC"
+    },
+    "136": {
+      "user_id": "2",
+      "problem_index": 2,
+      "submitted_seconds": 6240,
+      "verdict": "AC"
+    },
+    "137": {
+      "user_id": "14",
+      "problem_index": 4,
+      "submitted_seconds": 6420,
+      "verdict": "AC"
+    },
+    "138": {
+      "user_id": "12",
+      "problem_index": 5,
+      "submitted_seconds": 6420,
+      "verdict": "AC"
+    },
+    "139": {
+      "user_id": "19",
+      "problem_index": 4,
+      "submitted_seconds": 6420,
+      "verdict": "WA"
+    },
+    "140": {
+      "user_id": "9",
+      "problem_index": 7,
+      "submitted_seconds": 6600,
+      "verdict": "CE"
+    },
+    "141": {
+      "user_id": "7",
+      "problem_index": 5,
+      "submitted_seconds": 6600,
+      "verdict": "RE"
+    },
+    "142": {
+      "user_id": "8",
+      "problem_index": 5,
+      "submitted_seconds": 6720,
+      "verdict": "WA"
+    },
+    "143": {
+      "user_id": "4",
+      "problem_index": 5,
+      "submitted_seconds": 6720,
+      "verdict": "WA"
+    },
+    "144": {
+      "user_id": "19",
+      "problem_index": 4,
+      "submitted_seconds": 6780,
+      "verdict": "WA"
+    },
+    "145": {
+      "user_id": "12",
+      "problem_index": 4,
+      "submitted_seconds": 6780,
+      "verdict": "AC"
+    },
+    "146": {
+      "user_id": "7",
+      "problem_index": 5,
+      "submitted_seconds": 6780,
+      "verdict": "WA"
+    },
+    "147": {
+      "user_id": "4",
+      "problem_index": 5,
+      "submitted_seconds": 6840,
+      "verdict": "WA"
+    },
+    "148": {
+      "user_id": "11",
+      "problem_index": 6,
+      "submitted_seconds": 6900,
+      "verdict": "WA"
+    },
+    "149": {
+      "user_id": "4",
+      "problem_index": 5,
+      "submitted_seconds": 6900,
+      "verdict": "WA"
+    },
+    "150": {
+      "user_id": "7",
+      "problem_index": 5,
+      "submitted_seconds": 7020,
+      "verdict": "WA"
+    },
+    "151": {
+      "user_id": "20",
+      "problem_index": 10,
+      "submitted_seconds": 7200,
+      "verdict": "AC"
+    },
+    "152": {
+      "user_id": "16",
+      "problem_index": 6,
+      "submitted_seconds": 7200,
+      "verdict": "RE"
+    },
+    "153": {
+      "user_id": "7",
+      "problem_index": 5,
+      "submitted_seconds": 7200,
+      "verdict": "AC"
+    },
+    "154": {
+      "user_id": "16",
+      "problem_index": 10,
+      "submitted_seconds": 7260,
+      "verdict": "AC"
+    },
+    "155": {
+      "user_id": "1",
+      "problem_index": 6,
+      "submitted_seconds": 7320,
+      "verdict": "RE"
+    },
+    "156": {
+      "user_id": "5",
+      "problem_index": 5,
+      "submitted_seconds": 7320,
+      "verdict": "AC"
+    },
+    "157": {
+      "user_id": "6",
+      "problem_index": 2,
+      "submitted_seconds": 7440,
+      "verdict": "WA"
+    },
+    "158": {
+      "user_id": "18",
+      "problem_index": 4,
+      "submitted_seconds": 7440,
+      "verdict": "WA"
+    },
+    "159": {
+      "user_id": "13",
+      "problem_index": 8,
+      "submitted_seconds": 7560,
+      "verdict": "RE"
+    },
+    "160": {
+      "user_id": "2",
+      "problem_index": 5,
+      "submitted_seconds": 7860,
+      "verdict": "WA"
+    },
+    "161": {
+      "user_id": "8",
+      "problem_index": 2,
+      "submitted_seconds": 7920,
+      "verdict": "AC"
+    },
+    "162": {
+      "user_id": "18",
+      "problem_index": 4,
+      "submitted_seconds": 7980,
+      "verdict": "WA"
+    },
+    "163": {
+      "user_id": "13",
+      "problem_index": 8,
+      "submitted_seconds": 8040,
+      "verdict": "RE"
+    },
+    "164": {
+      "user_id": "18",
+      "problem_index": 4,
+      "submitted_seconds": 8040,
+      "verdict": "WA"
+    },
+    "165": {
+      "user_id": "20",
+      "problem_index": 4,
+      "submitted_seconds": 8220,
+      "verdict": "WA"
+    },
+    "166": {
+      "user_id": "13",
+      "problem_index": 8,
+      "submitted_seconds": 8280,
+      "verdict": "RE"
+    },
+    "167": {
+      "user_id": "12",
+      "problem_index": 9,
+      "submitted_seconds": 8280,
+      "verdict": "AC"
+    },
+    "168": {
+      "user_id": "20",
+      "problem_index": 4,
+      "submitted_seconds": 8400,
+      "verdict": "AC"
+    },
+    "169": {
+      "user_id": "1",
+      "problem_index": 6,
+      "submitted_seconds": 8400,
+      "verdict": "RE"
+    },
+    "170": {
+      "user_id": "8",
+      "problem_index": 8,
+      "submitted_seconds": 8400,
+      "verdict": "WA"
+    },
+    "171": {
+      "user_id": "13",
+      "problem_index": 8,
+      "submitted_seconds": 8520,
+      "verdict": "TLE"
+    },
+    "172": {
+      "user_id": "18",
+      "problem_index": 4,
+      "submitted_seconds": 8580,
+      "verdict": "WA"
+    },
+    "173": {
+      "user_id": "2",
+      "problem_index": 5,
+      "submitted_seconds": 8640,
+      "verdict": "AC"
+    },
+    "174": {
+      "user_id": "16",
+      "problem_index": 2,
+      "submitted_seconds": 8640,
+      "verdict": "AC"
+    },
+    "175": {
+      "user_id": "11",
+      "problem_index": 6,
+      "submitted_seconds": 8820,
+      "verdict": "WA"
+    },
+    "176": {
+      "user_id": "18",
+      "problem_index": 4,
+      "submitted_seconds": 8820,
+      "verdict": "WA"
+    },
+    "177": {
+      "user_id": "6",
+      "problem_index": 2,
+      "submitted_seconds": 8880,
+      "verdict": "AC"
+    },
+    "178": {
+      "user_id": "12",
+      "problem_index": 2,
+      "submitted_seconds": 9000,
+      "verdict": "AC"
+    },
+    "179": {
+      "user_id": "10",
+      "problem_index": 7,
+      "submitted_seconds": 9000,
+      "verdict": "AC"
+    },
+    "180": {
+      "user_id": "8",
+      "problem_index": 6,
+      "submitted_seconds": 9120,
+      "verdict": "AC"
+    },
+    "181": {
+      "user_id": "20",
+      "problem_index": 9,
+      "submitted_seconds": 9600,
+      "verdict": "AC"
+    },
+    "182": {
+      "user_id": "5",
+      "problem_index": 6,
+      "submitted_seconds": 9720,
+      "verdict": "AC"
+    },
+    "183": {
+      "user_id": "8",
+      "problem_index": 8,
+      "submitted_seconds": 9900,
+      "verdict": "WA"
+    },
+    "184": {
+      "user_id": "12",
+      "problem_index": 6,
+      "submitted_seconds": 10020,
+      "verdict": "WA"
+    },
+    "185": {
+      "user_id": "16",
+      "problem_index": 7,
+      "submitted_seconds": 10080,
+      "verdict": "AC"
+    },
+    "186": {
+      "user_id": "8",
+      "problem_index": 8,
+      "submitted_seconds": 10260,
+      "verdict": "AC"
+    },
+    "187": {
+      "user_id": "11",
+      "problem_index": 5,
+      "submitted_seconds": 10320,
+      "verdict": "TLE"
+    },
+    "188": {
+      "user_id": "4",
+      "problem_index": 6,
+      "submitted_seconds": 10320,
+      "verdict": "WA"
+    },
+    "189": {
+      "user_id": "11",
+      "problem_index": 6,
+      "submitted_seconds": 10500,
+      "verdict": "WA"
+    },
+    "190": {
+      "user_id": "4",
+      "problem_index": 6,
+      "submitted_seconds": 10560,
+      "verdict": "WA"
+    },
+    "191": {
+      "user_id": "2",
+      "problem_index": 6,
+      "submitted_seconds": 10560,
+      "verdict": "AC"
+    },
+    "192": {
+      "user_id": "2",
+      "problem_index": 7,
+      "submitted_seconds": 10740,
+      "verdict": "AC"
+    },
+    "193": {
+      "user_id": "4",
+      "problem_index": 6,
+      "submitted_seconds": 10740,
+      "verdict": "WA"
+    },
+    "194": {
+      "user_id": "3",
+      "problem_index": 2,
+      "submitted_seconds": 11040,
+      "verdict": "WA"
+    },
+    "195": {
+      "user_id": "1",
+      "problem_index": 4,
+      "submitted_seconds": 11040,
+      "verdict": "WA"
+    },
+    "196": {
+      "user_id": "10",
+      "problem_index": 5,
+      "submitted_seconds": 11100,
+      "verdict": "RE"
+    },
+    "197": {
+      "user_id": "16",
+      "problem_index": 6,
+      "submitted_seconds": 11280,
+      "verdict": "WA"
+    },
+    "198": {
+      "user_id": "18",
+      "problem_index": 10,
+      "submitted_seconds": 11460,
+      "verdict": "WA"
+    },
+    "199": {
+      "user_id": "9",
+      "problem_index": 9,
+      "submitted_seconds": 11580,
+      "verdict": "WA"
+    },
+    "200": {
+      "user_id": "19",
+      "problem_index": 9,
+      "submitted_seconds": 11580,
+      "verdict": "AC"
+    },
+    "201": {
+      "user_id": "13",
+      "problem_index": 8,
+      "submitted_seconds": 11640,
+      "verdict": "WA"
+    },
+    "202": {
+      "user_id": "14",
+      "problem_index": 10,
+      "submitted_seconds": 11640,
+      "verdict": "AC"
+    },
+    "203": {
+      "user_id": "12",
+      "problem_index": 6,
+      "submitted_seconds": 11640,
+      "verdict": "WA"
+    },
+    "204": {
+      "user_id": "9",
+      "problem_index": 9,
+      "submitted_seconds": 11700,
+      "verdict": "WA"
+    },
+    "205": {
+      "user_id": "13",
+      "problem_index": 8,
+      "submitted_seconds": 11760,
+      "verdict": "WA"
+    },
+    "206": {
+      "user_id": "11",
+      "problem_index": 6,
+      "submitted_seconds": 11760,
+      "verdict": "WA"
+    },
+    "207": {
+      "user_id": "9",
+      "problem_index": 9,
+      "submitted_seconds": 11820,
+      "verdict": "WA"
+    },
+    "208": {
+      "user_id": "4",
+      "problem_index": 5,
+      "submitted_seconds": 11820,
+      "verdict": "TLE"
+    },
+    "209": {
+      "user_id": "4",
+      "problem_index": 6,
+      "submitted_seconds": 11940,
+      "verdict": "WA"
+    },
+    "210": {
+      "user_id": "13",
+      "problem_index": 8,
+      "submitted_seconds": 12000,
+      "verdict": "TLE"
+    },
+    "211": {
+      "user_id": "16",
+      "problem_index": 6,
+      "submitted_seconds": 12000,
+      "verdict": "AC"
+    },
+    "212": {
+      "user_id": "8",
+      "problem_index": 5,
+      "submitted_seconds": 12000,
+      "verdict": "RE"
+    },
+    "213": {
+      "user_id": "8",
+      "problem_index": 5,
+      "submitted_seconds": 12060,
+      "verdict": "AC"
+    },
+    "214": {
+      "user_id": "10",
+      "problem_index": 5,
+      "submitted_seconds": 12240,
+      "verdict": "RE"
+    },
+    "215": {
+      "user_id": "6",
+      "problem_index": 5,
+      "submitted_seconds": 12420,
+      "verdict": "WA"
+    },
+    "216": {
+      "user_id": "1",
+      "problem_index": 7,
+      "submitted_seconds": 12480,
+      "verdict": "AC"
+    },
+    "217": {
+      "user_id": "3",
+      "problem_index": 2,
+      "submitted_seconds": 12540,
+      "verdict": "WA"
+    },
+    "218": {
+      "user_id": "9",
+      "problem_index": 9,
+      "submitted_seconds": 12540,
+      "verdict": "WA"
+    },
+    "219": {
+      "user_id": "9",
+      "problem_index": 9,
+      "submitted_seconds": 12780,
+      "verdict": "WA"
+    },
+    "220": {
+      "user_id": "13",
+      "problem_index": 8,
+      "submitted_seconds": 12780,
+      "verdict": "WA"
+    },
+    "221": {
+      "user_id": "9",
+      "problem_index": 4,
+      "submitted_seconds": 12960,
+      "verdict": "WA"
+    },
+    "222": {
+      "user_id": "14",
+      "problem_index": 9,
+      "submitted_seconds": 12960,
+      "verdict": "WA"
+    },
+    "223": {
+      "user_id": "20",
+      "problem_index": 11,
+      "submitted_seconds": 13080,
+      "verdict": "RE"
+    },
+    "224": {
+      "user_id": "1",
+      "problem_index": 6,
+      "submitted_seconds": 13200,
+      "verdict": "RE"
+    },
+    "225": {
+      "user_id": "9",
+      "problem_index": 9,
+      "submitted_seconds": 13200,
+      "verdict": "WA"
+    },
+    "226": {
+      "user_id": "9",
+      "problem_index": 9,
+      "submitted_seconds": 13320,
+      "verdict": "AC"
+    },
+    "227": {
+      "user_id": "10",
+      "problem_index": 5,
+      "submitted_seconds": 13320,
+      "verdict": "WA"
+    },
+    "228": {
+      "user_id": "11",
+      "problem_index": 5,
+      "submitted_seconds": 13380,
+      "verdict": "AC"
+    },
+    "229": {
+      "user_id": "6",
+      "problem_index": 5,
+      "submitted_seconds": 13560,
+      "verdict": "AC"
+    },
+    "230": {
+      "user_id": "20",
+      "problem_index": 11,
+      "submitted_seconds": 13680,
+      "verdict": "AC"
+    },
+    "231": {
+      "user_id": "14",
+      "problem_index": 9,
+      "submitted_seconds": 13740,
+      "verdict": "AC"
+    },
+    "232": {
+      "user_id": "9",
+      "problem_index": 4,
+      "submitted_seconds": 13740,
+      "verdict": "WA"
+    },
+    "233": {
+      "user_id": "3",
+      "problem_index": 2,
+      "submitted_seconds": 13740,
+      "verdict": "AC"
+    },
+    "234": {
+      "user_id": "18",
+      "problem_index": 6,
+      "submitted_seconds": 13800,
+      "verdict": "AC"
+    },
+    "235": {
+      "user_id": "18",
+      "problem_index": 6,
+      "submitted_seconds": 13800,
+      "verdict": "AC"
+    },
+    "236": {
+      "user_id": "4",
+      "problem_index": 5,
+      "submitted_seconds": 14100,
+      "verdict": "WA"
+    },
+    "237": {
+      "user_id": "12",
+      "problem_index": 10,
+      "submitted_seconds": 14220,
+      "verdict": "AC"
+    },
+    "238": {
+      "user_id": "4",
+      "problem_index": 5,
+      "submitted_seconds": 14280,
+      "verdict": "AC"
+    },
+    "239": {
+      "user_id": "4",
+      "problem_index": 6,
+      "submitted_seconds": 14400,
+      "verdict": "WA"
+    },
+    "240": {
+      "user_id": "13",
+      "problem_index": 8,
+      "submitted_seconds": 14820,
+      "verdict": "AC"
+    },
+    "241": {
+      "user_id": "1",
+      "problem_index": 6,
+      "submitted_seconds": 15240,
+      "verdict": "AC"
+    },
+    "242": {
+      "user_id": "12",
+      "problem_index": 6,
+      "submitted_seconds": 15300,
+      "verdict": "TLE"
+    },
+    "243": {
+      "user_id": "16",
+      "problem_index": 9,
+      "submitted_seconds": 15300,
+      "verdict": "RE"
+    },
+    "244": {
+      "user_id": "7",
+      "problem_index": 6,
+      "submitted_seconds": 15300,
+      "verdict": "WA"
+    },
+    "245": {
+      "user_id": "3",
+      "problem_index": 5,
+      "submitted_seconds": 15420,
+      "verdict": "AC"
+    },
+    "246": {
+      "user_id": "18",
+      "problem_index": 10,
+      "submitted_seconds": 15420,
+      "verdict": "TLE"
+    },
+    "247": {
+      "user_id": "1",
+      "problem_index": 4,
+      "submitted_seconds": 15600,
+      "verdict": "WA"
+    },
+    "248": {
+      "user_id": "7",
+      "problem_index": 6,
+      "submitted_seconds": 15660,
+      "verdict": "WA"
+    },
+    "249": {
+      "user_id": "9",
+      "problem_index": 4,
+      "submitted_seconds": 15720,
+      "verdict": "WA"
+    },
+    "250": {
+      "user_id": "12",
+      "problem_index": 6,
+      "submitted_seconds": 15960,
+      "verdict": "TLE"
+    },
+    "251": {
+      "user_id": "19",
+      "problem_index": 10,
+      "submitted_seconds": 15960,
+      "verdict": "WA"
+    },
+    "252": {
+      "user_id": "16",
+      "problem_index": 9,
+      "submitted_seconds": 16020,
+      "verdict": "AC"
+    },
+    "253": {
+      "user_id": "19",
+      "problem_index": 10,
+      "submitted_seconds": 16080,
+      "verdict": "TLE"
+    },
+    "254": {
+      "user_id": "1",
+      "problem_index": 4,
+      "submitted_seconds": 16080,
+      "verdict": "WA"
+    },
+    "255": {
+      "user_id": "2",
+      "problem_index": 9,
+      "submitted_seconds": 16320,
+      "verdict": "WA"
+    },
+    "256": {
+      "user_id": "12",
+      "problem_index": 6,
+      "submitted_seconds": 16320,
+      "verdict": "RE"
+    },
+    "257": {
+      "user_id": "6",
+      "problem_index": 12,
+      "submitted_seconds": 16440,
+      "verdict": "WA"
+    },
+    "258": {
+      "user_id": "20",
+      "problem_index": 12,
+      "submitted_seconds": 16500,
+      "verdict": "CE"
+    },
+    "259": {
+      "user_id": "18",
+      "problem_index": 4,
+      "submitted_seconds": 16620,
+      "verdict": "WA"
+    },
+    "260": {
+      "user_id": "12",
+      "problem_index": 6,
+      "submitted_seconds": 16620,
+      "verdict": "WA"
+    },
+    "261": {
+      "user_id": "12",
+      "problem_index": 6,
+      "submitted_seconds": 16800,
+      "verdict": "AC"
+    },
+    "262": {
+      "user_id": "1",
+      "problem_index": 4,
+      "submitted_seconds": 16800,
+      "verdict": "WA"
+    },
+    "263": {
+      "user_id": "19",
+      "problem_index": 10,
+      "submitted_seconds": 17100,
+      "verdict": "TLE"
+    },
+    "264": {
+      "user_id": "10",
+      "problem_index": 5,
+      "submitted_seconds": 17100,
+      "verdict": "AC"
+    },
+    "265": {
+      "user_id": "2",
+      "problem_index": 9,
+      "submitted_seconds": 17340,
+      "verdict": "WA"
+    },
+    "266": {
+      "user_id": "2",
+      "problem_index": 9,
+      "submitted_seconds": 17400,
+      "verdict": "WA"
+    },
+    "267": {
+      "user_id": "8",
+      "problem_index": 9,
+      "submitted_seconds": 17400,
+      "verdict": "WA"
+    },
+    "268": {
+      "user_id": "8",
+      "problem_index": 9,
+      "submitted_seconds": 17520,
+      "verdict": "WA"
+    },
+    "269": {
+      "user_id": "2",
+      "problem_index": 9,
+      "submitted_seconds": 17580,
+      "verdict": "WA"
+    },
+    "270": {
+      "user_id": "8",
+      "problem_index": 9,
+      "submitted_seconds": 17580,
+      "verdict": "WA"
+    },
+    "271": {
+      "user_id": "1",
+      "problem_index": 4,
+      "submitted_seconds": 17580,
+      "verdict": "WA"
+    },
+    "272": {
+      "user_id": "20",
+      "problem_index": 12,
+      "submitted_seconds": 17640,
+      "verdict": "WA"
+    },
+    "273": {
+      "user_id": "6",
+      "problem_index": 7,
+      "submitted_seconds": 17760,
+      "verdict": "RE"
+    },
+    "274": {
+      "user_id": "4",
+      "problem_index": 6,
+      "submitted_seconds": 17760,
+      "verdict": "WA"
+    },
+    "275": {
+      "user_id": "18",
+      "problem_index": 4,
+      "submitted_seconds": 17760,
+      "verdict": "WA"
+    },
+    "276": {
+      "user_id": "18",
+      "problem_index": 4,
+      "submitted_seconds": 17820,
+      "verdict": "WA"
+    },
+    "277": {
+      "user_id": "6",
+      "problem_index": 4,
+      "submitted_seconds": 17820,
+      "verdict": "WA"
+    },
+    "278": {
+      "user_id": "6",
+      "problem_index": 9,
+      "submitted_seconds": 17820,
+      "verdict": "WA"
+    },
+    "279": {
+      "user_id": "9",
+      "problem_index": 4,
+      "submitted_seconds": 17820,
+      "verdict": "WA"
+    },
+    "280": {
+      "user_id": "6",
+      "problem_index": 10,
+      "submitted_seconds": 17820,
+      "verdict": "WA"
+    },
+    "281": {
+      "user_id": "1",
+      "problem_index": 4,
+      "submitted_seconds": 17820,
+      "verdict": "WA"
+    },
+    "282": {
+      "user_id": "6",
+      "problem_index": 11,
+      "submitted_seconds": 17820,
+      "verdict": "WA"
+    },
+    "283": {
+      "user_id": "4",
+      "problem_index": 7,
+      "submitted_seconds": 17820,
+      "verdict": "RE"
+    },
+    "284": {
+      "user_id": "18",
+      "problem_index": 9,
+      "submitted_seconds": 17940,
+      "verdict": "WA"
+    },
+    "285": {
+      "user_id": "7",
+      "problem_index": 2,
+      "submitted_seconds": 17940,
+      "verdict": "WA"
+    }
+  }
 }
